@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Explore beautiful Himachal Pradesh tour packages.">
+
+    <title>HimTrail | Explore Himachal</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <a href="#home" class="logo">Him<span>Trail</span></a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#packages">Packages</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <p class="eyebrow">YOUR MOUNTAIN ESCAPE</p>
+
+                <h1>Discover the Magic of Himachal</h1>
+
+                <p>
+                    Explore beautiful mountains, peaceful valleys
+                    and unforgettable journeys.
+                </p>
+
+                <a href="#packages" class="btn">
+                    Explore Packages →
+                </a>
+            </div>
+        </section>
+
+        <!-- Packages Section -->
+        <section class="packages section" id="packages">
+
+            <div class="section-heading">
+                <p class="eyebrow">EXPLORE THE MOUNTAINS</p>
+                <h2>Popular Tour Packages</h2>
+                <p>Find your next mountain adventure.</p>
+            </div>
+
+            <!-- Filters -->
+            <div class="filters">
+
+                <label>
+                    Destination
+                    <select id="destination-filter">
+                        <option value="all">All Destinations</option>
+                        <option value="Manali">Manali</option>
+                        <option value="Shimla">Shimla</option>
+                        <option value="Spiti Valley">Spiti Valley</option>
+                        <option value="Dharamshala">Dharamshala</option>
+                    </select>
+                </label>
+
+                <label>
+                    Maximum Budget
+                    <select id="budget-filter">
+                        <option value="all">Any Budget</option>
+                        <option value="5000">₹5,000</option>
+                        <option value="8000">₹8,000</option>
+                        <option value="12000">₹12,000</option>
+                        <option value="15000">₹15,000</option>
+                    </select>
+                </label>
+
+                <label>
+                    Duration
+                    <select id="duration-filter">
+                        <option value="all">Any Duration</option>
+                        <option value="3">Up to 3 days</option>
+                        <option value="4">Up to 4 days</option>
+                        <option value="5">Up to 5 days</option>
+                        <option value="6">Up to 6 days</option>
+                    </select>
+                </label>
+
+                <button class="btn" id="reset-filters" type="button">
+                    Reset Filters
+                </button>
+
+            </div>
+
+            <div class="sort-row">
+                <p id="results-count" aria-live="polite">
+                    Loading packages...
+                </p>
+
+                <label>
+                    Sort:
+                    <select id="sort-filter">
+                        <option value="featured">Featured</option>
+                        <option value="price-asc">Price: Low to High</option>
+                        <option value="price-desc">Price: High to Low</option>
+                        <option value="duration-asc">Shortest First</option>
+                    </select>
+                </label>
+            </div>
+
+            <!-- JavaScript will display package cards here -->
+            <div class="package-grid" id="package-list"></div>
+
+            <div id="empty-state" class="empty-state" hidden>
+                <h3>No packages found</h3>
+                <p>Try changing your filters.</p>
+            </div>
+
+        </section>
+
+        <!-- About Section -->
+        <section class="about section" id="about">
+
+            <div>
+                <p class="eyebrow">TRAVEL WITH PURPOSE</p>
+                <h2>Less Rush. More Mountain Magic.</h2>
+
+                <p>
+                    Discover the beauty of Himachal Pradesh with
+                    thoughtfully planned journeys, scenic views
+                    and memorable experiences.
+                </p>
+
+                <a href="#contact" class="btn">
+                    Plan Your Trip →
+                </a>
+            </div>
+
+        </section>
+
+        <!-- Enquiry Form -->
+        <section class="contact section" id="contact">
+
+            <div class="section-heading">
+                <p class="eyebrow">LET'S PLAN TOGETHER</p>
+                <h2>Plan Your Trip</h2>
+                <p>Tell us about your next mountain escape.</p>
+            </div>
+
+            <form id="enquiry-form">
+
+                <label for="name">Full Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your name"
+                    required
+                    minlength="2"
+                >
+
+                <label for="email">Email Address</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+                <label for="phone">Mobile Number</label>
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="10-digit mobile number"
+                    pattern="[6-9][0-9]{9}"
+                    required
+                >
+
+                <label for="enquiry-destination">
+                    Preferred Destination
+                </label>
+
+                <select id="enquiry-destination" name="destination" required>
+                    <option value="">Select destination</option>
+                    <option value="Manali">Manali</option>
+                    <option value="Shimla">Shimla</option>
+                    <option value="Spiti Valley">Spiti Valley</option>
+                    <option value="Dharamshala">Dharamshala</option>
+                </select>
+
+                <label for="message">Additional Details</label>
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    placeholder="Travel dates, budget, number of people..."
+                ></textarea>
+
+                <button type="submit" class="btn">
+                    Send Enquiry →
+                </button>
+
+                <p id="form-message" aria-live="polite"></p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 HimTrail | Explore Himachal Pradesh</p>
+        <a href="#home">Back to Top ↑</a>
+    </footer>
+
+</body>
+</html>
